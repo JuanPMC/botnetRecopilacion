@@ -1,0 +1,3 @@
+So like I really don't have time to tell you how to setup everything.
+I fixed the issue with the login and simplified db for you because you lack any brain cells.
+have fun and figure it out. /* god 

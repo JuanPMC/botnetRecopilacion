@@ -1,0 +1,23 @@
+yum install gcc -y
+
+put the amps scanners in your scanning server
+
+now compile the scanners:
+gcc -std=c99 netbios_scanner.c -g -o netbios-scan -pthread
+gcc -std=c99 ntpscanner.c -g -o ntp-scan -pthread
+gcc -std=c99 mdns_scanner.c -g -o mdns-scan -pthread
+gcc -std=c99 portmap_scanner.c -g -o portmap-scan -pthread
+gcc -std=c99 ssdpscan.c -g -o ssdp-scan -pthread
+gcc -std=c99 ldapscan.c -g -o ldap-scan -pthread
+gcc -std=c99 memcache_scan.c -g -o memcache-scan -pthread
+
+now to run the scanners:
+./netbios-scan 1.0.0.0 255.255.255.0 netbios.txt threads 1ms
+./ntp-scan 1.0.0.0 255.255.255.0 ntp.txt threads 1ms
+./mdns-scan 1.0.0.0 255.255.255.0 mdns.txt threads 1ms
+./portmap-scan 1.0.0.0 255.255.255.0 portmap.txt threads 1ms
+./ssdp-scan 1.0.0.0 255.255.255.0 ssdp.txt threads 1ms
+./ldap-scan 1.0.0.0 255.255.255.0 ldap.txt threads 1ms
+./memcache-scan 1.0.0.0 255.255.255.0 memcache.txt threads 1ms
+
+done lol.

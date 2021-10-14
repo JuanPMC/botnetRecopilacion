@@ -1,0 +1,12 @@
+having trouble logging in?
+stuck on a black screen?
+
+go to /cnc/main.go
+
+go to Line 19
+
+fine this line
+
+const initial_string string = "debug"
+
+and enter the key in the quotation marks in the black screen and it should bring you too a login prompt, good luck
