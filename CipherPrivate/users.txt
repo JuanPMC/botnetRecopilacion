@@ -1,0 +1,2 @@
+Admin Password admin 10000 999999
+User password normal 100 600
